@@ -12,8 +12,10 @@
       <p class="text" onclick="changeFase('fase2')">Press start Button</p>
     </section>
 
-    <section class="screen1" id="fase2" style="display: none">
+    <section class="screen2" id="fase2" style="display: none">
       <div class="fighters">
+        <h1>PLAYER SELECT</h1>
+
         <div class="avatar" id="1" onclick="chooseFighter(1)">
           <img class="imgFighters" src="img/avatar1.png" />
         </div>
@@ -30,8 +32,16 @@
     </section>
 
     <section class="screen1" id="fase3" style="display: none">
-      <p class="text">ESTOY EN LA FASE 3</p>
+      <div class="centerOpponentBottom">
+        <div class="buttonFight">
+          <div class="buttonHit">
+            <img id="button" src="img/hit.png" onclick="hit()" />
+          </div>
+          <h3>Hit Me!</h3>
+        </div>
+      </div>
     </section>
+
     <script src="js/fighters.js"></script>
     <script src="js/main.js"></script>
   </body>
