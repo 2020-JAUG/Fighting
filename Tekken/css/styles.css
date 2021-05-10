@@ -1,0 +1,51 @@
+
+* {
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box
+}
+
+body {
+    background-image: url("/img/Tekken_3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    background-color: white;
+}
+
+.text {
+    color: white;
+    padding: 17em;
+}
+
+.screen1 {
+    background-color: rgba(0, 0, 0, 0.562);
+    width: 100vw;
+    height: 100vh;
+}
+
+.fighters {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgFighters {
+    width: 12em;
+    height: 12em;
+    border: 0.5em solid rgb(255, 255, 255);
+    margin: 1em;
+    transition: 0.5s;
+}
+
+.imgFighters:hover {
+    border: 0.5em solid rgba(65, 14, 185, 0.824);
+    transition: 0.5s;
+}
+
+.selected {
+    border: 0.5em solid red;
+    transition: 0.5s;
+}
