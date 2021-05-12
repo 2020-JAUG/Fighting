@@ -19,7 +19,7 @@ class Fighter{
         enemy.vida -= this.ataque + this.tecnica - (enemy.defensa * (enemy.suerte / this.velocidad));
     }
 
-    resetLife() {
+    lessLife() {
         this.vida = this.vidaInicial;
     }
 }
@@ -27,8 +27,8 @@ class Fighter{
 
 //Instancio luchadores
 let player1 = new Fighter("Yoshimitsu",39,23,14,22);
-let player2 = new Fighter("Eddy Gordo",34,21,14,19);
-let player3 = new Fighter("Jin Kazama",31,22,12,15);
+let player2 = new Fighter("Eddy",34,21,14,19);
+let player3 = new Fighter("Jin",31,22,12,15);
 let player4 = new Fighter("King",37,19,11,9);
 
 
@@ -37,5 +37,10 @@ let allPlayers = {
     "1" : player1,
     "2" : player2,
     "3" : player3,
-    "4" : player4
+    "4" : player4,
 }
+
+player1.hit(player2)
+player3.hit(player3)
+
+console.log(player1, player2, player3,player4);
