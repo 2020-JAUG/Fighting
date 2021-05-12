@@ -5,41 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
-    <title>Mortal Kombat</title>
+    <title>Tekken 3</title>
   </head>
   <body>
+    <!-- JUST PRESS TO START -->
     <section class="screen1" id="fase1">
       <p class="text" onclick="changeFase('fase2')">Press to start</p>
     </section>
 
-    <section class="screen2" id="fase2" style="display: none">
+    <!-- CHOOSE YOUR FIGHTER -->
+    <section class="screen2 screen1" id="fase2" style="display: none">
       <div class="fighters">
-        <h1>PLAYER SELECT</h1>
-
+        <h1 class="choose">Choose Your Fighter</h1>
         <div class="avatar" id="1" onclick="chooseFighter(1)">
-          <img class="imgFighters" src="img/avatar1.png" />
+          <img class="imgFighters" src="img/yoshimitsu.png" />
         </div>
         <div class="avatar" id="2" onclick="chooseFighter(2)">
-          <img class="imgFighters" src="img/avatar2.png" />
+          <img class="imgFighters" src="img/eddy.png" />
         </div>
         <div class="avatar" id="3" onclick="chooseFighter(3)">
-          <img class="imgFighters" src="img/avatar3.png" />
+          <img class="imgFighters" src="img/jin.png" />
         </div>
         <div class="avatar" id="4" onclick="chooseFighter(4)">
-          <img class="imgFighters" src="img/avatar4.png" />
+          <img class="imgFighters" src="img/king.png" />
+        </div>
+      </div>
+    </section>
+    <!-- SHOW THE FIGHTERS -->
+    <section class="screen1 screen2" id="fase3" style="display: none">
+      <div
+        class="maquetaEquipos"
+        onclick="changeFase('fase4')"
+        id="teams"
+      ></div>
+      <h1 class="teamA">Team A</h1>
+      <h1 class="teamB teamA">Team B</h1>
+    </section>
+    <!-- FIGHT -->
+    <section class="screen2 screen1" id="fase4" style="display: none">
+      <div class="btn-hitMe">
+        <div class="btnFight">
+          <div class="btnHit">
+            <img id="button" src="img/hit.png" onclick="fighting()" />
+          </div>
+          <div class="maquetaEquipos2" id="fight"></div>
+          <h3 class="hit">Attack!</h3>
         </div>
       </div>
     </section>
 
-    <section class="screen1" id="fase3" style="display: none">
-      <div class="btn-hitMe">
-        <div class="btnFight">
-          <div class="btnHit">
-            <img id="button" src="img/hit.png" onclick="hit()" />
-          </div>
-          <h3 class="hit">Hit Me!</h3>
-        </div>
-      </div>
+    <section class="screen1" id="fase5" style="display: none">
+      <p class="text" onclick="changeFase('fase2')">Fase 5</p>
     </section>
 
     <script src="js/fighters.js"></script>
