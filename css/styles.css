@@ -60,13 +60,12 @@ h1 {
     color: rgb(238, 255, 0);
     position: relative;
     top: -9em;
-    left: 19.5em;
+    left: 18.5em;
 }
 
 .fighters {
     position: relative;
     top: 22em;
-    left: 0em;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -137,15 +136,15 @@ h1 {
 .teamA {
     position: relative;
     display: flex;
-    left: 9em;
-    top: -24em;
+    left: 6em;
+    top: -28em;
     height: 3em;
     color: rgba(254, 3, 3, 0.694);
 }
 
 .teamB {
-    top: -26.9em;
-    left: 30em;
+    top: -30.9em;
+    left: 27em;
 }
 
 .btn-hitMe {
@@ -226,7 +225,7 @@ h1 {
     flex-direction: column;
     background-color: rgba(148, 45, 33, 0.201);
 
-    top: 20em;
+    top: 15em;
     left: 16em;
     cursor: pointer;
 }
