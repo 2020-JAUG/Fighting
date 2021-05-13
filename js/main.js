@@ -12,7 +12,7 @@ const changeFase = (destino) => {
 
     document.getElementById(destino).style.display = "block";
 
-    for(let _fase of arrFase) { //_fase es el nombre de la variable para iteraren los elementos del arrFase
+    for(let _fase of arrFase) { //_fase es el nombre de la variable para iterar en los elementos del arrFase
         document.getElementById(_fase).style.display = "none";
     }
 };
@@ -20,16 +20,16 @@ const changeFase = (destino) => {
 const chooseFighter = (fighter) => {
 
 
-    if(team2.length < 2) {
+    if(team2.length < 1) {
 
-        if(team1.length < 2) {
+        if(team1.length < 1) {
             team1.push(allPlayers[fighter]);
 
         } else {
 
             team2.push(allPlayers[fighter]);
 
-            if(team2.length == 2) {
+            if(team2.length == 1) {
                 // console.log("ESTE ES EL TEAM1 ", team1);
                 // console.log("ESTE ES EL TEAM2 ", team2);
                 llenaEquipos();
@@ -41,7 +41,6 @@ const chooseFighter = (fighter) => {
                 }, 1000);
             }
         }
-
         document.getElementById(fighter).onclick = "";
         document.getElementById(fighter).className = "selected";
     }
@@ -53,15 +52,19 @@ const llenaEquipos = () => {
     teams.innerHTML = `
     <div class="teamCharacters">
         <div><img class="imgFighters" src="img/${team1[0].nombre}.png" alt="luchador1"></div>
-        <div><img class="imgFighters" src="img/${team1[1].nombre}.png" alt="luchador3"></div>
     </div>
     <div class="fightPanel"><img class="fotoVersus" src="img/fight.png" alt="lucha"></div>
     <div class="teamCharacters">
         <div><img class="imgFighters" src="img/${team2[0].nombre}.png" alt="luchador2"></div>
-        <div><img class="imgFighters" src="img/${team2[1].nombre}.png" alt="luchador4"></div>
     </div>
     `;
 }
+
+//PARA PONER MAS JUGADORES EN LA FASE SELECCIONADOS
+{/* <div><img class="imgFighters" src="img/${team1[1].nombre}.png" alt="luchador3"></div>
+<div><img class="imgFighters" src="img/${team2[1].nombre}.png" alt="luchador4"></div> */}
+
+
 
 const fight = () => {
     let fight = document.getElementById("fight");
@@ -72,8 +75,8 @@ const fight = () => {
     <div class="teamCharacters">
         <div><img class="imgFighters2" src="img/${team2[0].nombre}.png" alt="luchador2"></div>
     </div>`
-    console.log("este team 1 scenariofight", team1);
-    console.log("este team 2 scenariofight", team2);
+    // console.log("este team 1 scenariofight", team1);
+    // console.log("este team 2 scenariofight", team2);
 }
 // const fight2 = () => {
 
@@ -110,20 +113,16 @@ const fight = () => {
 //         winner(player1.name)
 // };
 
-
  fighting = () => {
 
     p1 = team1[0];
     p2 = team2[0];
-
-    // console.log("empieza la lucha");
 
     p1.hit(p2);
     p2.hit(p1);
 
     healthP1 = document.getElementById("healtP1")
     healthP2 = document.getElementById("healtP2")
-
     console.log(p1.vida,p2.vida);
     if(p1.vida <= 0 || p2.vida <= 0) {
 
@@ -131,7 +130,7 @@ const fight = () => {
         winner.innerHTML = `
         <div class="teamCharacters">
             <div class="containerWinner" id="winnerName">You Win!</div>
-            <div><img class="winner" src="img/${team2[1].nombre}.png" alt="luchador2"></div>
+            <div><img class="winner" src="img/${team2[0].nombre}.png" alt="luchador2"></div>
         </div>
         `
         changeFase("fase5");
@@ -153,6 +152,5 @@ const fight = () => {
 
     // healthP1.value = `${player1.vida}`;
     // healthP2.value = `${player2.vida}`;
-    // winner();
+    // winner()
 }
-
