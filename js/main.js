@@ -138,7 +138,15 @@ const fight = () => {
         console.log("prueba para imprimir ganador");
     }
 
- 
+    let resetGame = document.getElementById("resetBtn");
+
+    resetGame.addEventListener("click", showWinner );
+
+    function showWinner() {
+
+        changeFase("fase1");
+        window.location.reload();
+    }
 
 
     //FIGHTER LIFE COUNTING
