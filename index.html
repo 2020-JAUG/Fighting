@@ -54,8 +54,20 @@
       </div>
     </section>
 
-    <section class="screen1" id="fase5" style="display: none">
-      <p class="text" onclick="changeFase('fase2')">Fase 5</p>
+    <!-- SHOW WINNER -->
+    <section class="screen1 screen2" id="fase5" style="display: none">
+      <div class="maquetaEquipos2" id="fightWinner">
+        <div class="containerWinner">
+          <div class="winner">
+            <div class="buttonPlayAgain">
+              <button class="start hit btnFight btnHit" id="resetBtn">
+                Reset Game
+              </button>
+            </div>
+          </div>
+          <div class="winner" id="winner"></div>
+        </div>
+      </div>
     </section>
 
     <script src="js/fighters.js"></script>

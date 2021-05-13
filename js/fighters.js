@@ -40,7 +40,7 @@ let allPlayers = {
     "4" : player4,
 }
 
-player1.hit(player2)
-player3.hit(player3)
+// player1.hit(player2)
+// player3.hit(player3)
 
 console.log(player1, player2, player3,player4);
