@@ -79,7 +79,9 @@ h1 {
     margin: 1em;
     transition: 0.5s;
     position: relative;
-    left: -4em;
+    cursor: pointer;
+    border-radius: 0.2em;
+    left: -0.4em;
 }
 
 .imgFighters2 {
@@ -88,17 +90,16 @@ h1 {
     margin: 1em;
     transition: 0.5s;
 }
-
 .imgFighters:hover {
     border: 0.5em solid rgba(255, 0, 0, 0.824);
     transition: 0.5s;
+    transform: translateY(-2em);
 }
-
 .selected {
     width: 12em;
     height: 12em;
     margin: 1em;
-    transform: translateY(1.24em);
+    transform: translateY(2.24em);
     /* border: 0.1em solid  rgba(192, 204, 18, 0.646); */
     transition: 0.5s;
 }
@@ -136,15 +137,17 @@ h1 {
 .teamA {
     position: relative;
     display: flex;
-    left: 6em;
-    top: -28em;
+    left: -1em;
+    top: 1em;
     height: 3em;
     color: rgba(254, 3, 3, 0.694);
 }
 
 .teamB {
-    top: -30.9em;
-    left: 27em;
+    display: flex;
+    position: relative;
+    top: 1em;
+    left: -1em;
 }
 
 .btn-hitMe {
@@ -185,6 +188,9 @@ h1 {
 .fightPanel{
     width: 5em;
     height: 8em;
+    display: flex;
+    position: relative;
+    left: 3.5em;
 }
 .fotoVersus {
     height: 12em;
@@ -230,4 +236,46 @@ h1 {
     cursor: pointer;
 }
 
+#myProgress {
+    display: flex;
+    position: relative;
 
+    top: 3em;
+    left: 47em;
+    width: 30%;
+    border-radius: 2.3em;
+    background-color: grey;
+}
+
+#myBar {
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    border-radius: 2.3em;
+    height: 30px;
+    background-color: green;
+    transition: width 0.6s;
+}
+
+#myProgress2 {
+    display: flex;
+    position: relative;
+
+    top: -16.9em;
+    left: 4em;
+    width: 30%;
+    border-radius: 2.3em;
+    background-color: grey;
+}
+
+#myBar2 {
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    border-radius: 2.3em;
+    height: 30px;
+    background-color: green;
+    transition: width 0.6s;
+}
