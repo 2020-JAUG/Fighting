@@ -3,7 +3,7 @@ class Fighter{
 
     constructor(nombre,ataque,defensa,tecnica,velocidad) {
         this.vida = 400;
-        this.suerte = Math.floor(Math.random() * 11);
+        this.suerte = Math.floor(Math.random() * 17);
         this.nombre = nombre;
         this.ataque = ataque;
         this.defensa = defensa;
