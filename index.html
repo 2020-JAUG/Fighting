@@ -22,6 +22,10 @@
         </div>
         <div class="avatar" id="2" onclick="chooseFighter(2)">
           <img class="imgFighters" src="img/eddy.png" />
+          <!-- <div class="capa">
+            <h3>Eddy</h3>
+            <p>Attack: 34 Defending: 21 Technique: 14 Velocity: 19</p>
+          </div> -->
         </div>
         <div class="avatar" id="3" onclick="chooseFighter(3)">
           <img class="imgFighters" src="img/jin.png" />
@@ -41,6 +45,11 @@
     </section>
     <!-- FIGHT -->
     <section class="screen2 screen1" id="fase4" style="display: none">
+      <!-- PLAYER 1 LIFE -->
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+
       <div class="btn-hitMe">
         <div class="btnFight">
           <div class="btnHit">
@@ -49,6 +58,11 @@
           <div class="maquetaEquipos2" id="fight"></div>
           <h3 class="hit">Attack!</h3>
         </div>
+      </div>
+
+      <!-- PLAYER 2 LIFE -->
+      <div id="myProgress2">
+        <div id="myBar2"></div>
       </div>
     </section>
 
@@ -59,7 +73,7 @@
           <div class="winner">
             <div class="buttonPlayAgain">
               <button class="start hit btnFight btnHit" id="resetBtn">
-                Reset Game
+                Click Here To Play Again
               </button>
             </div>
           </div>
