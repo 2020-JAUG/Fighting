@@ -5,8 +5,8 @@ startAudio.addEventListener("click", () => {
     let audio = document.createElement("audio");
     audio.setAttribute("src", "/audios/start.mp3");
     audio.play();
-    console.log("prueba");
 });
+
 // Function to play the presentations
 'use strict';
 
