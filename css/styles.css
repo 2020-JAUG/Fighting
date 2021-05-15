@@ -5,6 +5,34 @@
     box-sizing: border-box
 }
 
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    height: 100;
+    padding: 0px;
+}
+.audio{
+    width: 6em;
+    height: 3em;
+    color: red;
+    text-align: center;
+    justify-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.2em;
+    top: 12em;
+    left: 32.9em;
+}
 body {
     margin: 0;
     height: 100vh;
@@ -36,10 +64,23 @@ body {
     background-color: #030303;
     background-image: none;
 }
+#fase4 {
+    background-image: url("/img/stage.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
 #fase5 {
     width: 22em;
     height: 16em;
+    background-image: url("/img/youWinn.jpeg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
+
 .text {
     color: rgb(255, 156, 7);
     text-align: center;
@@ -50,9 +91,8 @@ body {
     top: 18em;
 }
 
-.text:active {
-    width: 99%;
-    filter: invert(90%);
+.text:hover {
+    transition: all;
 }
 
 
@@ -81,7 +121,7 @@ h1 {
     position: relative;
     cursor: pointer;
     border-radius: 0.2em;
-    left: -0.4em;
+    left: -7em;
 }
 
 .imgFighters2 {
@@ -119,7 +159,7 @@ h1 {
     align-items: center;
     position: relative;
     width: 2em;
-    top: -3em;
+    top: -4em;
     height: 2em;
 }
 
@@ -177,12 +217,14 @@ h1 {
 }
 
 .btnHit {
-    width: 80%;
     border-radius: 50%;
     box-shadow: 0em 0em 0.68em 0.56em rgba(0,0,0,0.75);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 60%;
+    height: 5em;
+    width: 7em;
 }
 
 .fightPanel{
@@ -199,30 +241,21 @@ h1 {
     top: -2em;
     position: relative;
 }
-#button {
-    width: 100%;
-    height: 100%;
-}
+
 .hit {
     top: -1em;
     position: relative;
     color: rgb(255, 156, 7);
 }
-#button:active {
-    width: 99%;
-    filter: invert(70%);
-}
-
 .winner {
     display: flex;
     position: absolute;
     flex-direction: column;
-
     height: 20em;
     width: 15em;
     margin: 6em;
-    top: 4em;
-    left: -3em;
+    top: -1.7em;
+    left: 8.8em;
 }
 
 .start {
@@ -234,6 +267,28 @@ h1 {
     top: 15em;
     left: 16em;
     cursor: pointer;
+}
+#button {
+    width: 100%;
+    height: 100%;
+}
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+#button:active {
+    width: 99%;
+    filter: invert(70%);
 }
 
 #myProgress {
@@ -278,4 +333,96 @@ h1 {
     height: 30px;
     background-color: green;
     transition: width 0.6s;
+}
+
+@media screen and (min-width: 1442px) {
+    .maquetaEquipos2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 2em;
+        left: 10em;
+        top: 4em;
+        height: 2em;
+}
+    h3 {
+        left: 6.5em;
+        position: absolute;
+        color: rgb(255, 156, 7);
+}
+    .winner {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        height: 20em;
+        width: 15em;
+        margin: 6em;
+        top: -3em;
+        left: 8.8em;
+}
+    .hit {
+        color: rgb(255, 156, 7);
+    }
+    .btnHit {
+        border-radius: 90%;
+        box-shadow: 0em 0em 0.68em 0.56em rgba(0,0,0,0.75);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 60%;
+        height: 5em;
+        width: 7em;
+        top: 5em;
+        position: absolute;
+        left: 7em;
+}
+    .start {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgba(148, 45, 33, 0.201);
+        top: 6em;
+        left: 7.7em;
+        cursor: pointer;
+    }
+    .btnFight {
+        height: 7rem;
+        width: 7rem;
+        cursor: pointer;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-shadow: 3px 3px #030303;
+        font-size: 1.5rem;
+        display: flex;
+        right: 7em;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+    .audio{
+        width: 6em;
+        height: 3em;
+        color: red;
+        text-align: center;
+        justify-items: center;
+        position: relative;
+        cursor: pointer;
+        border-radius: 0.2em;
+        top: 16em;
+        left: 44.9em;
+    }
+    .imgFighters {
+        width: 12em;
+        height: 12em;
+        border: 0.1em solid rgba(237, 6, 6, 0.336);
+        margin: 1em;
+        transition: 0.5s;
+        position: relative;
+        cursor: pointer;
+        border-radius: 0.2em;
+        left: -0em;
+    }
 }
