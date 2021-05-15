@@ -4,13 +4,34 @@
     padding: 0em;
     box-sizing: border-box
 }
+body {
+    margin: 0;
+    height: 100vh;
+    font-weight: 100vw;
+    background: radial-gradient(rgb(204, 173, 0),#b10b2cfa);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+#fase3 {
+    background-color: #030303;
+    background-image: none;
+}
+#fase4 {
+    background-image: url("/img/stage.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#fase5 {
+    width: 22em;
+    height: 16em;
+    background-image: url("/img/youWinn.jpeg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 .content {
     position: fixed;
@@ -33,15 +54,6 @@
     top: 12em;
     left: 32.9em;
 }
-body {
-    margin: 0;
-    height: 100vh;
-    font-weight: 100vw;
-    background: radial-gradient(rgb(204, 173, 0),#b10b2cfa);
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-
 .screen1 {
     background-image: url("/img/Tekken7.png");
     background-size: contain;
@@ -60,27 +72,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-#fase3 {
-    background-color: #030303;
-    background-image: none;
-}
-#fase4 {
-    background-image: url("/img/stage.png");
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-#fase5 {
-    width: 22em;
-    height: 16em;
-    background-image: url("/img/youWinn.jpeg");
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
 .text {
     color: rgb(255, 156, 7);
     text-align: center;
@@ -290,7 +281,13 @@ h1 {
     width: 99%;
     filter: invert(70%);
 }
-
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
 #myProgress {
     display: flex;
     position: relative;
