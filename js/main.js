@@ -12,7 +12,7 @@ const changeFase = (destino) => {
 
     document.getElementById(destino).style.display = "block";
 
-    for(let _fase of arrFase) { //_fase es el nombre de la variable para iterar en los elementos del arrFase
+    for(let _fase of arrFase) { //_phase is the name of the variable to iterate through the elements of the array Phase
         document.getElementById(_fase).style.display = "none";
     }
 };
@@ -32,20 +32,24 @@ const chooseFighter = (fighter) => {
             if(team2.length == 1) {
                 // console.log("ESTE ES EL TEAM1 ", team1);
                 // console.log("ESTE ES EL TEAM2 ", team2);
-                llenaEquipos();
-                changeFase("fase3");
-
                 setTimeout(() => {
-                    fight();
-                    changeFase("fase4");
-                }, 4000);
+                    // Show the figthers
+                    changeFase("fase3");
+                    llenaEquipos();
+
+                    // Present VS
+                    setTimeout(() => {
+                        fight();
+                        changeFase("fase4");
+                    }, 6000);
+
+                }, 5000)
             }
         }
         document.getElementById(fighter).onclick = "";
         document.getElementById(fighter).className = "selected";
     }
 }
-
 
 const llenaEquipos = () => {
     let teams = document.getElementById("teams");
@@ -65,18 +69,15 @@ const llenaEquipos = () => {
     `;
 }
 
-//PARA PONER MAS JUGADORES EN LA FASE SELECCIONADOS
-{/* <div><img class="imgFighters" src="img/${team1[1].nombre}.png" alt="luchador3"></div>
-<div><img class="imgFighters" src="img/${team2[1].nombre}.png" alt="luchador4"></div> */}
-
-
 const fight = () => {
 
     let fight = document.getElementById("fight");
+
     fight.innerHTML =
     `<div class="teamCharacters">
         <div><img class="imgFighters2" src="img/${team1[0].nombre}.png" alt="luchador1"></div>
     </div>
+
     <div class="teamCharacters">
         <div><img class="imgFighters2" src="img/${team2[0].nombre}.png" alt="luchador2"></div>
     </div>`
@@ -94,25 +95,25 @@ const fight = () => {
     p2.hit(p1);
     updateLife();
 
-    console.log("vida del teamA",p1.vida,"vida del equip2",p2.vida);
+    // console.log("vida del teamA",p1.vida,"vida del equip2",p2.vida);
 
         if(p1.vida <= 0 ) {
 
             let winner = document.getElementById("winner");
             winner.innerHTML = `
             <div class="teamCharacters">
-                <div class="containerWinner" id="winnerName">You Win!</div>
+                <div class="containerWinner" id="winnerName"></div>
                 <div><img class="winner" src="img/${team2[0].nombre}.png" alt="luchador2"></div>
             </div>
             `
             changeFase("fase5");
-            console.log("prueba para imprimir ganador");
+            // console.log("prueba para imprimir ganador");
         } else if(p2.vida <= 0) {
 
             let winner = document.getElementById("winner");
             winner.innerHTML = `
             <div class="teamCharacters">
-                <div class="containerWinner" id="winnerName">You Win!</div>
+                <div class="containerWinner" id="winnerName"></div>
                 <div><img class="winner" src="img/${team1[0].nombre}.png" alt="luchador2"></div>
             </div>
             `
@@ -146,73 +147,3 @@ const fight = () => {
 
                 document.getElementById("myBar2").style.width = vidaBarra2 + "%";
         }
-
-// Function to play the presentations
-    'use strict';
-
-    let sound = document.querySelector(".mouse");
-    let soundEddy = document.querySelector(".mouseEddy");
-    let soundJin = document.querySelector(".mouseJin");
-    let soundKing = document.querySelector(".mouseKing");
-
-
-    switch(sound, soundEddy, soundJin, soundKing) {
-
-        case   sound.addEventListener("click", () => {
-                let audio = document.createElement("audio");
-                audio.setAttribute("src", "/audios/yoshimitsu.mp3");
-                audio.play();
-            }):
-            break;
-
-        case soundEddy.addEventListener('click', () => {
-            let audio = document.createElement("audio");
-            audio.setAttribute("src", "/audios/eddy.mp3");
-            audio.play();
-        }):
-        break;
-
-        case soundJin.addEventListener('click', () => {
-            let audio = document.createElement("audio");
-            audio.setAttribute("src", "/audios/jin.mp3");
-            audio.play();
-        }):
-        break;
-
-        case soundKing.addEventListener('click', () => {
-            let audio = document.createElement("audio");
-            audio.setAttribute("src", "/audios/king.mp3");
-            audio.play();
-        }):
-
-        default:
-            texto = 'ERR';
-    }
-
-{/* <div class="opponent" >
-<div class="players">PLAYER 2</div>
-<div class="life"><progress id="healthP2" value="400" min="0" max="400"></progress></canvas></div>
-<div class="contrincante" id="opponent2"></div>
-</div>
-*/}
-
-
-//FUNCION PARA CREAR UN SEGUNDO COMBATE CON DOS JUGADORES MAS
-
-// const fight2 = () => {
-
-//     let fight = document.getElementById("fight");
-//     fight.innerHTML =
-//         console.log('Estoy en fase 5');
-//         let fightWinner = document.getElementById("fightWinner");
-
-//         fightWinner.innerHTML = `<div class="teamCharacters">
-//             <div><img class="imgFighters2" src="img/${team1[1].nombre}.png" alt="luchador1"></div>
-//         </div>
-//         <div class="teamCharacters">
-//             <div><img class="imgFighters2" src="img/${team2[1].nombre}.png" alt="luchador2"></div>
-//         </div>`
-//     console.log("este team 1 scenariofight", team1);
-//     console.log("este team 2 scenariofight", team2);
-
-// }
