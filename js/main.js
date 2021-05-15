@@ -39,7 +39,7 @@ const chooseFighter = (fighter) => {
                     setTimeout(() => {
                         fight();
                         changeFase("fase4");
-                    }, 6000);
+                    }, 13000);
 
                 }, 5000)
             }
