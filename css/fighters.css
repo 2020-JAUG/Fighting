@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container figure {
+    position: relative;
+    height: 13em;
+    width: 13em;
+    overflow: hidden;
+    border-radius: 0.4em;
+    box-shadow: 0em 0.93em 1.56em rgba(0,0,0,0.50);
+    cursor: pointer;
+}
+
+.container figure img {
+    transition: all 500ms ease-out;
+}
+
+.container figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 38, 21, 0.858);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.container figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container figure:hover > .capa h3{
+    margin-top: 3.75em;
+    margin-bottom: 0.93em;
+}
+.container figure:hover > img{
+    transform: scale(1.3);
+}
+
+.container figure .capa h3{
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    margin-bottom: 7.5em;
+    transition: all 500ms ease-out;
+    margin-top: 1.87em;
+}
+.container figure:hover .capa p {
+    color: rgb(255, 156, 7);
+    font-size: 0.93em;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 13.75em;
+    margin: auto;
+}
+
+.mouse {
+    display: flex;
+    position: relative;
+    left: -13em;
+}
+.mouseEddy {
+    display: flex;
+    position: relative;
+    left: -9em;
+}
+.mouseJin {
+    display: flex;
+    position: relative;
+    left: -5em;
+}
+.mouseKing {
+    display: flex;
+    position: relative;
+    left: -1em;
+}
+
+@media screen and (min-width: 1442px) {
+    .container figure:hover > .capa h3{
+        margin-top: 2.75em;
+        margin-bottom: 0.93em;
+        left: 5em;
+        top: 4em;
+    }
+    .container figure .capa h3{
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        /* margin-bottom: 7.5em; */
+        transition: all 500ms ease-out;
+        margin-top: 1.87em;
+        left: 4em;
+    }
+    .container figure:hover .capa p {
+        color: rgb(255, 156, 7);
+        font-size: 1em;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 13.75em;
+        margin: auto;
+    }
+    .container figure {
+        position: relative;
+        height: 13em;
+        width: 13em;
+        overflow: hidden;
+        border-radius: 0.4em;
+        box-shadow: 0em 0.93em 1.56em rgba(0,0,0,0.50);
+        cursor: pointer;
+    }
+}
