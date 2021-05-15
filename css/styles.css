@@ -124,13 +124,13 @@ h1 {
 .imgFighters:hover {
     border: 0.5em solid rgba(255, 0, 0, 0.824);
     transition: 0.5s;
-    transform: translateY(-2em);
+    transform: translateY(-22em);
 }
 .selected {
     width: 12em;
     height: 12em;
     margin: 1em;
-    transform: translateY(2.24em);
+    transform: translateY(-19.29em);
     /* border: 0.1em solid  rgba(192, 204, 18, 0.646); */
     transition: 0.5s;
 }
