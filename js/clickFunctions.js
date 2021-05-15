@@ -15,10 +15,11 @@ let soundEddy = document.querySelector(".mouseEddy");
 let soundJin = document.querySelector(".mouseJin");
 let soundKing = document.querySelector(".mouseKing");
 let mouseNextFight = document.querySelector(".mouseNextFight");
+let mouseHit = document.querySelector(".mouseHit");
 
-switch(sound, soundEddy, soundJin, soundKing, mouseNextFight) {
+switch(sound, soundEddy, soundJin, soundKing, mouseNextFight, mouseHit) {
 
-    case   sound.addEventListener("click", () => {
+    case sound.addEventListener("click", () => {
             let audio = document.createElement("audio");
             audio.setAttribute("src", "/audios/yoshimitsu.mp3");
             audio.play();
@@ -44,10 +45,18 @@ switch(sound, soundEddy, soundJin, soundKing, mouseNextFight) {
         audio.setAttribute("src", "/audios/king.mp3");
         audio.play();
     }):
+    break;
 
     case mouseNextFight.addEventListener('click', () => {
         let audio = document.createElement("audio");
-        audio.setAttribute("src", "/audios/nextFight.mp3");
+        audio.setAttribute("src", "/audios/fightPresent.mp3");
+        audio.play();
+    }):
+    break;
+
+    case mouseHit.addEventListener('click', () => {
+        let audio = document.createElement("audio");
+        audio.setAttribute("src", "/audios/golpe.mp3");
         audio.play();
     }):
 
