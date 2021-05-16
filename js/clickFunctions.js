@@ -3,7 +3,7 @@ let startAudio  = document.querySelector(".startAudio");
 
 startAudio.addEventListener("click", () => {
     let audio = document.createElement("audio");
-    audio.setAttribute("src", "../audios/start.mp3");
+    audio.setAttribute("src", "/audios/start.mp3");
     audio.play();
 });
 
@@ -21,7 +21,7 @@ switch(sound, soundEddy, soundJin, soundKing, mouseNextFight, mouseHit) {
 
     case sound.addEventListener("click", () => {
             let audio = document.createElement("audio");
-            audio.setAttribute("src", "../audios/yoshimitsu.mp3");
+            audio.setAttribute("src", "/audios/yoshimitsu.mp3");
             audio.play();
         }):
         break;
