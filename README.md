@@ -23,6 +23,11 @@
 ![captura](/img/presentation.png) <br><br>
 ![captura](/img/pressFight.png)
 
+# Coding
+ ![captura](/img/boy.jpg)
+| Hours worked | 7 Hours  |
+| -----------  | -------  |
+
 ## Upgrades
 <h4> I have the following pending features: </h4>
 
